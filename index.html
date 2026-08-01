@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="ha">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HARZ Digital - Koya Trading & Digital Marketing</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: #0a0e27;
+            color: #fff;
+            line-height: 1.6;
+        }
+        .hero {
+            background: linear-gradient(135deg, #0a0e27 0%, #1a1f4a 50%, #2a1f5a 100%);
+            padding: 60px 20px 40px;
+            text-align: center;
+        }
+        .hero h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+            background: linear-gradient(to right, #25D366, #00d4ff);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .hero p {
+            font-size: 1.1em;
+            color: #aab;
+            max-width: 600px;
+            margin: 0 auto 20px;
+        }
+        .hero .tagline {
+            font-size: 1.3em;
+            color: #25D366;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+        .products {
+            padding: 40px 20px;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+        .products h2 {
+            text-align: center;
+            font-size: 1.8em;
+            margin-bottom: 30px;
+            color: #00d4ff;
+        }
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+        }
+        .product-card {
+            background: linear-gradient(135deg, #1a1f4a, #2a1f5a);
+            border-radius: 15px;
+            padding: 25px;
+            border: 1px solid #333;
+            transition: transform 0.3s, border-color 0.3s;
+        }
+        .product-card:hover {
+            transform: translateY(-5px);
+            border-color: #25D366;
+        }
+        .product-card h3 {
+            font-size: 1.3em;
+            color: #25D366;
+            margin-bottom: 10px;
+        }
+        .product-card .desc {
+            color: #ccd;
+            margin-bottom: 15px;
+            font-size: 0.95em;
+        }
+        .product-card .price {
+            font-size: 1.5em;
+            font-weight: bold;
+            color: #00d4ff;
+            margin-bottom: 5px;
+        }
+        .product-card .price-usd {
+            color: #889;
+            font-size: 0.9em;
+            margin-bottom: 15px;
+        }
+        .product-card .btn {
+            display: inline-block;
+            background: #25D366;
+            color: #fff;
+            padding: 10px 25px;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: background 0.3s;
+        }
+        .product-card .btn:hover {
+            background: #1eb858;
+        }
+        .payment-section {
+            background: #111633;
+            padding: 40px 20px;
+            text-align: center;
+        }
+        .payment-section h2 {
+            color: #00d4ff;
+            margin-bottom: 20px;
+            font-size: 1.5em;
+        }
+        .payment-methods {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 15px;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        .payment-badge {
+            background: #1a1f4a;
+            padding: 10px 20px;
+            border-radius: 10px;
+            border: 1px solid #333;
+            font-size: 0.95em;
+        }
+        .payment-badge strong {
+            color: #25D366;
+        }
+        .affiliate-section {
+            padding: 40px 20px;
+            text-align: center;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+        .affiliate-section h2 {
+            color: #25D366;
+            margin-bottom: 15px;
+            font-size: 1.6em;
+        }
+        .affiliate-section p {
+            color: #ccd;
+            margin-bottom: 20px;
+        }
+        .affiliate-codes {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            flex-wrap: wrap;
+            margin-bottom: 20px;
+        }
+        .affiliate-code {
+            background: #1a1f4a;
+            padding: 12px 25px;
+            border-radius: 10px;
+            border: 2px solid #25D366;
+        }
+        .affiliate-code .code {
+            font-size: 1.2em;
+            font-weight: bold;
+            color: #25D366;
+        }
+        .affiliate-code .rate {
+            color: #889;
+            font-size: 0.85em;
+        }
+        .whatsapp-btn {
+            display: inline-block;
+            background: #25D366;
+            color: #fff;
+            padding: 12px 30px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1.1em;
+            margin-top: 10px;
+        }
+        .whatsapp-btn:hover {
+            background: #1eb858;
+        }
+        .contact-section {
+            background: #0a0e27;
+            padding: 30px 20px;
+            text-align: center;
+            border-top: 1px solid #222;
+        }
+        .contact-section p {
+            color: #889;
+            margin: 5px 0;
+        }
+        .contact-section .name {
+            color: #25D366;
+            font-size: 1.2em;
+            font-weight: bold;
+        }
+        @media (max-width: 600px) {
+            .hero h1 { font-size: 1.8em; }
+            .product-card { padding: 20px; }
+        }
+    </style>
+</head>
+<body>
+    <div class="hero">
+        <h1>HARZ Digital</h1>
+        <div class="tagline">Koya Trading & Digital Marketing</div>
+        <p>Kuɿi, ilimi, da damar kasuwanci. Daga ƙaramin mataki zuwa babban ciniki. Mu koya tare.</p>
+    </div>
+
+    <div class="products">
+        <h2>Kayayyakin Mu</h2>
+        <div class="product-grid">
+            <div class="product-card">
+                <h3>Digital Marketing Course</h3>
+                <p class="desc">Koyi yadda za ka sayar da kayayka a intanet — social media marketing, content creation, da sales funnels. Cikakken koyarwa.</p>
+                <div class="price">₦16,000</div>
+                <div class="price-usd">~$10 USD</div>
+                <a href="https://wa.me/2348028687857?text=Na%20so%20Digital%20Marketing%20Course" class="btn">Sayi Yanzu</a>
+            </div>
+            <div class="product-card">
+                <h3>Trading Basics eBook</h3>
+                <p class="desc">Littafi kan asalin trading — yadda za ka fara ciniki a kasuwar kudi da crypto. Sauƙi fahimta.</p>
+                <div class="price">₦8,000</div>
+                <div class="price-usd">~$5 USD</div>
+                <a href="https://wa.me/2348028687857?text=Na%20so%20Trading%20Basics%20eBook" class="btn">Sayi Yanzu</a>
+            </div>
+            <div class="product-card">
+                <h3>Premium Mentorship Program</h3>
+                <p class="desc">Koyarwa ta musamman daga Rabiu — trading da digital marketing mataimatai zuwa gaba. Kujeru kaɗan.</p>
+                <div class="price">₦64,000</div>
+                <div class="price-usd">~$40 USD</div>
+                <a href="https://wa.me/2348028687857?text=Na%20so%20Premium%20Mentorship" class="btn">Sayi Yanzu</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="payment-section">
+        <h2>Hanyoyin Biya</h2>
+        <div class="payment-methods">
+            <div class="payment-badge"><strong>UBA Bank Transfer</strong><br>2034326424<br>Rabiu Hamza Mohammed</div>
+            <div class="payment-badge"><strong>Paystack</strong><br>Card Payment</div>
+            <div class="payment-badge"><strong>GDEG Token</strong><br>Polygon Network</div>
+            <div class="payment-badge"><strong>USDT TRC20</strong><br>Crypto</div>
+            <div class="payment-badge"><strong>Gumroad</strong><br>Global Card</div>
+            <div class="payment-badge"><strong>Paddle</strong><br>Global Checkout</div>
+        </div>
+    </div>
+
+    <div class="affiliate-section">
+        <h2>Shiga Affiliate Program</h2>
+        <p>Raba lambar tallata mu, ka sami kwamishin akan kowane sayarwa. Babu kuɗi a gaba!</p>
+        <div class="affiliate-codes">
+            <div class="affiliate-code">
+                <div class="code">RABIU10</div>
+                <div class="rate">10% kwamishin</div>
+            </div>
+            <div class="affiliate-code">
+                <div class="code">HAUWA15</div>
+                <div class="rate">15% kwamishin</div>
+            </div>
+            <div class="affiliate-code">
+                <div class="code">PARTNER20</div>
+                <div class="rate">20% kwamishin</div>
+            </div>
+        </div>
+        <a href="https://wa.me/2348028687857?text=Na%20so%20in%20zama%20affiliate" class="whatsapp-btn">Rajista Yanzu</a>
+    </div>
+
+    <div class="contact-section">
+        <p class="name">Rabiu Hamza Mohammed</p>
+        <p>HARZ Digital</p>
+        <p>WhatsApp: 0802 868 7857</p>
+        <p>&copy; 2026 HARZ Digital. All rights reserved.</p>
+    </div>
+</body>
+</html>
