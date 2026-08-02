@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Harz Digital Marketing Suite — AI-Powered Marketing Command Center</title>
+<meta name="description" content="Complete digital marketing suite: trend research, content pipeline, ad campaigns, social media tools, and AI-powered marketing automation for Nigerian businesses.">
+<meta name="keywords" content="digital marketing, AI marketing, content creation, social media, trend research, ad campaigns, Nigeria, marketing automation">
+<meta property="og:title" content="Harz Digital Marketing Suite — AI Marketing Command Center">
+<meta property="og:description" content="Complete digital marketing suite with AI-powered trend research, content pipeline, ad campaigns, and marketing automation.">
+<meta property="og:url" content="https://rabiuhamza11.github.io/harz-portfolio/harz-digital-marketing.html">
+<meta property="og:type" content="website">
+<link rel="canonical" href="https://rabiuhamza11.github.io/harz-portfolio/harz-digital-marketing.html">
+<style>
+:root{--bg:#0a0a0f;--card:#13131f;--border:#252535;--accent:#7c3aed;--accent2:#e94560;--text:#e8e8f0;--muted:#8888a0;--green:#00d97e;--yellow:#ffc107;--blue:#3b82f6}
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:var(--bg);color:var(--text);font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;padding-bottom:80px}
+header{background:linear-gradient(135deg,#1a0a2e 0%,#0a0a1f 100%);padding:2rem 1rem;text-align:center;border-bottom:1px solid var(--border)}
+header h1{font-size:1.6rem;background:linear-gradient(90deg,var(--accent),var(--accent2));-webkit-background-clip:text;-webkit-text-fill-color:transparent;margin-bottom:.5rem}
+header p{color:var(--muted);font-size:.9rem}
+.container{max-width:1200px;margin:0 auto;padding:1rem}
+.nav-tabs{display:flex;gap:.5rem;overflow-x:auto;padding:.5rem 0;margin-bottom:1rem;scrollbar-width:thin}
+.nav-tab{padding:.6rem 1.2rem;background:var(--card);border:1px solid var(--border);border-radius:10px;cursor:pointer;white-space:nowrap;font-size:.85rem;color:var(--muted);transition:all .2s}
+.nav-tab.active{background:var(--accent);color:#fff;border-color:var(--accent)}
+.nav-tab:hover{border-color:var(--accent)}
+.tab-content{display:none}
+.tab-content.active{display:block}
+.stats-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:.75rem;margin-bottom:1.5rem}
+.stat-card{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:1rem;text-align:center}
+.stat-card .num{font-size:1.8rem;font-weight:700;color:var(--accent)}
+.stat-card .label{font-size:.75rem;color:var(--muted);margin-top:.25rem}
+.stat-card.green .num{color:var(--green)}
+.stat-card.blue .num{color:var(--blue)}
+.stat-card.yellow .num{color:var(--yellow)}
+.section-title{font-size:1rem;font-weight:600;margin-bottom:.75rem;display:flex;align-items:center;gap:.5rem}
+.section-title .badge{font-size:.65rem;background:var(--accent);color:#fff;padding:.15rem .5rem;border-radius:6px}
+.card{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:1rem;margin-bottom:.75rem;transition:border-color .2s}
+.card:hover{border-color:var(--accent)}
+.card h3{font-size:.95rem;margin-bottom:.4rem}
+.card p{font-size:.8rem;color:var(--muted);line-height:1.5}
+.card .meta{display:flex;gap:.5rem;flex-wrap:wrap;margin-top:.5rem}
+.tag{font-size:.7rem;padding:.2rem .6rem;border-radius:6px;background:rgba(124,58,237,.15);color:var(--accent)}
+.tag.green{background:rgba(0,217,126,.15);color:var(--green)}
+.tag.yellow{background:rgba(255,193,7,.15);color:var(--yellow)}
+.tag.blue{background:rgba(59,130,246,.15);color:var(--blue)}
+.tag.red{background:rgba(233,69,96,.15);color:var(--accent2)}
+.score-bar{height:4px;background:var(--border);border-radius:2px;margin-top:.5rem;overflow:hidden}
+.score-bar .fill{height:100%;border-radius:2px;background:linear-gradient(90deg,var(--green),var(--accent))}
+.tools-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:.75rem}
+tool-card{background:var(--card);border:1px solid var(--border);border-radius:10px;padding:.85rem;cursor:pointer;transition:all .2s;display:block;text-decoration:none;color:var(--text)}
+tool-card:hover{border-color:var(--accent);transform:translateY(-2px)}
+tool-card .icon{font-size:1.5rem;margin-bottom:.4rem}
+tool-card h4{font-size:.85rem;margin-bottom:.2rem}
+tool-card p{font-size:.72rem;color:var(--muted)}
+.agent-card{background:var(--card);border:1px solid var(--border);border-radius:10px;padding:.85rem;margin-bottom:.6rem}
+.agent-card .name{font-size:.85rem;font-weight:600}
+.agent-card .role{font-size:.72rem;color:var(--accent);margin-top:.2rem}
+.agent-card .caps{font-size:.7rem;color:var(--muted);margin-top:.3rem}
+.agent-card .status{display:inline-block;font-size:.65rem;padding:.1rem .4rem;border-radius:4px;margin-top:.4rem}
+.status-idle{background:rgba(136,136,160,.2);color:var(--muted)}
+.status-active{background:rgba(0,217,126,.2);color:var(--green)}
+.pipeline{display:flex;gap:.5rem;overflow-x:auto;padding-bottom:.5rem}
+.pipeline-stage{min-width:120px;background:var(--card);border:1px solid var(--border);border-radius:10px;padding:.75rem;text-align:center;flex-shrink:0}
+.pipeline-stage .step{font-size:.7rem;color:var(--accent);font-weight:600;text-transform:uppercase}
+.pipeline-stage .desc{font-size:.75rem;color:var(--muted);margin-top:.3rem}
+.pipeline-arrow{display:flex;align-items:center;color:var(--muted)}
+.ad-card{background:var(--card);border:1px solid var(--border);border-radius:10px;padding:.85rem;margin-bottom:.6rem}
+.ad-card .biz{font-size:.9rem;font-weight:600}
+.ad-card .pkg{font-size:.7rem;color:var(--accent);margin-top:.2rem}
+.ad-card .status-tag{font-size:.65rem;padding:.15rem .5rem;border-radius:4px;display:inline-block;margin-top:.4rem}
+.btn{display:inline-block;padding:.6rem 1.2rem;background:var(--accent);color:#fff;border:none;border-radius:8px;cursor:pointer;font-size:.85rem;text-decoration:none}
+.btn:hover{opacity:.9}
+.btn.outline{background:transparent;border:1px solid var(--border);color:var(--text)}
+.btn.green{background:var(--green)}
+.action-bar{display:flex;gap:.5rem;flex-wrap:wrap;margin-bottom:1rem}
+.action-bar .btn{font-size:.8rem;padding:.5rem .9rem}
+.empty{text-align:center;padding:2rem;color:var(--muted);font-size:.85rem}
+.float-chat{position:fixed;bottom:20px;right:20px;width:56px;height:56px;background:var(--accent);border-radius:50%;display:flex;align-items:center;justify-content:center;cursor:pointer;box-shadow:0 4px 20px rgba(124,58,237,.4);z-index:999;text-decoration:none}
+.float-chat svg{width:24px;height:24px;fill:#fff}
+@media(max-width:600px){header h1{font-size:1.3rem}.tools-grid{grid-template-columns:1fr 1fr}.stats-grid{grid-template-columns:1fr 1fr}}
+</style>
+</head>
+<body>
+<header>
+<h1>Harz Digital Marketing Suite</h1>
+<p>AI-Powered Marketing Command Center — Trend Research, Content Pipeline, Ad Campaigns & Automation</p>
+</header>
+
+<div class="container">
+<div class="nav-tabs">
+<div class="nav-tab active" onclick="switchTab('overview')">Overview</div>
+<div class="nav-tab" onclick="switchTab('trends')">Trend Research</div>
+<div class="nav-tab" onclick="switchTab('pipeline')">Content Pipeline</div>
+<div class="nav-tab" onclick="switchTab('tools')">Marketing Tools</div>
+<div class="nav-tab" onclick="switchTab('agents')">AI Agents</div>
+<div class="nav-tab" onclick="switchTab('ads')">Ad Submissions</div>
+<div class="nav-tab" onclick="switchTab('campaigns')">Campaigns</div>
+</div>
+
+<div id="overview" class="tab-content active">
+<div class="stats-grid" id="statsGrid">
+<div class="stat-card"><div class="num" id="trendCount">--</div><div class="label">Trends Tracked</div></div>
+<div class="stat-card green"><div class="num" id="oppCount">--</div><div class="label">High Opportunities</div></div>
+<div class="stat-card blue"><div class="num" id="projectCount">--</div><div class="label">Content Projects</div></div>
+<div class="stat-card yellow"><div class="num" id="agentCount">--</div><div class="label">AI Agents</div></div>
+<div class="stat-card"><div class="num" id="toolCount">18+</div><div class="label">Marketing Tools</div></div>
+<div class="stat-card green"><div class="num" id="adCount">--</div><div class="label">Ad Campaigns</div></div>
+</div>
+
+<div class="section-title">Content Pipeline <span class="badge">Automated</span></div>
+<div class="pipeline">
+<div class="pipeline-stage"><div class="step">1. Discover</div><div class="desc">Trend research across YouTube, TikTok, X</div></div>
+<div class="pipeline-arrow">→</div>
+<div class="pipeline-stage"><div class="step">2. Script</div><div class="desc">AI generates viral scripts & hooks</div></div>
+<div class="pipeline-stage"><div class="step">3. Visuals</div><div class="desc">Thumbnails, images & video generation</div></div>
+<div class="pipeline-stage"><div class="step">4. Publish</div><div class="desc">Schedule & post across platforms</div></div>
+<div class="pipeline-stage"><div class="step">5. Analyze</div><div class="desc">Track views, engagement, revenue</div></div>
+</div>
+
+<div class="section-title" style="margin-top:1.5rem">Quick Actions</div>
+<div class="action-bar">
+<a class="btn" href="https://superagent-2286fb2f.base44.app/functions/digitalMarketing" target="_blank">Run Trend Discovery</a>
+<a class="btn outline" href="ad-copy-generator.html">Ad Copy Generator</a>
+<a class="btn outline" href="social-media-planner.html">Social Media Planner</a>
+<a class="btn outline" href="content-calendar-template.html">Content Calendar</a>
+<a class="btn green" href="https://wa.me/2348028687857?text=Run%20marketing%20automation" target="_blank">Trigger via WhatsApp</a>
+</div>
+
+<div class="section-title">Top Trending Opportunities</div>
+<div id="topTrends"></div>
+</div>
+
+<div id="trends" class="tab-content">
+<div class="section-title">Trend Research Dashboard <span class="badge">Live Data</span></div>
+<div class="action-bar">
+<a class="btn" href="https://superagent-2286fb2f.base44.app/functions/digitalMarketing" target="_blank">Discover New Trends</a>
+<a class="btn outline" href="youtube-tag-generator.html">YouTube Tags</a>
+<a class="btn outline" href="hashtag-research-tool.html">Hashtag Research</a>
+</div>
+<div id="trendList"></div>
+</div>
+
+<div id="pipeline" class="tab-content">
+<div class="section-title">Content Production Pipeline</div>
+<div class="action-bar">
+<a class="btn" href="https://superagent-2286fb2f.base44.app/functions/digitalMarketing" target="_blank">Create New Project</a>
+<a class="btn outline" href="content-calendar-template.html">Content Calendar</a>
+<a class="btn outline" href="social-post-generator.html">Post Generator</a>
+</div>
+<div id="pipelineList"></div>
+</div>
+
+<div id="tools" class="tab-content">
+<div class="section-title">Marketing Tools Arsenal <span class="badge">18+ Tools</span></div>
+<div class="tools-grid" id="toolsGrid"></div>
+</div>
+
+<div id="agents" class="tab-content">
+<div class="section-title">AI Marketing Agents <span class="badge">10 Agents</span></div>
+<div id="agentList"></div>
+</div>
+
+<div id="ads" class="tab-content">
+<div class="section-title">Nexal Ad Submissions</div>
+<div class="action-bar">
+<a class="btn" href="https://wa.me/2348028687857?text=Check%20ad%20submissions" target="_blank">Process Pending</a>
+<a class="btn outline" href="ad-spend-roi-calculator.html">ROI Calculator</a>
+</div>
+<div id="adList"></div>
+</div>
+
+<div id="campaigns" class="tab-content">
+<div class="section-title">Marketing Campaigns</div>
+<div class="action-bar">
+<a class="btn" href="https://wa.me/2348028687857?text=Create%20new%20campaign" target="_blank">Create Campaign</a>
+<a class="btn outline" href="utm-builder.html">UTM Builder</a>
+<a class="btn outline" href="ad-copy-generator.html">Ad Copy Generator</a>
+</div>
+<div id="campaignList"></div>
+<div class="empty" id="campaignEmpty">No campaigns yet. I'll create your first campaign automatically when trends are discovered.</div>
+</div>
+</div>
+
+<a class="float-chat" href="https://wa.me/2348028687857?text=Hi%20Magani" target="_blank">
+<svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12c0 1.85.5 3.58 1.38 5.07L2 22l5.07-1.38C8.56 21.5 10.29 22 12 22c5.52 0 10-4.48 10-10S17.52 2 12 2zm0 18c-1.66 0-3.22-.45-4.55-1.24l-.33-.2-3.02.82.82-3.02-.2-.33C3.45 15.22 3 13.66 3 12c0-4.96 4.04-9 9-9s9 4.04 9 9-4.04 9-9 9zm5-7.88l-1.86-.93c-.28-.14-.62-.11-.87.08l-1.12.86c-1.04-.55-1.87-1.38-2.42-2.42l.86-1.12c.19-.25.22-.59.08-.87L10.88 6c-.21-.42-.69-.63-1.15-.51l-1.7.42c-.47.12-.8.55-.78 1.03.05 1.43.42 2.8 1.07 4.04.65 1.24 1.58 2.27 2.73 3.05 1.15.78 2.45 1.25 3.83 1.39.48.05.92-.27 1.05-.74l.5-1.55c.14-.43-.05-.9-.45-1.11z"/></svg>
+</a>
+
+<script>
+const API='https://superagent-2286fb2f.base44.app/functions/digitalMarketing';
+const tools=[
+{icon:'📝',title:'Ad Copy Generator',url:'ad-copy-generator.html',desc:'Facebook, Google, TikTok, WhatsApp ads'},
+{icon:'📊',title:'Ad Spend ROI Calculator',url:'ad-spend-roi-calculator.html',desc:'Calculate ad ROI and break-even'},
+{icon:'📱',title:'Social Post Generator',url:'social-post-generator.html',desc:'Multi-platform social posts'},
+{icon:'🗓️',title:'Social Media Planner',url:'social-media-planner.html',desc:'Plan & schedule content'},
+{icon:'📅',title:'Content Calendar',url:'content-calendar-template.html',desc:'Monthly content grid'},
+{icon:'#️⃣',title:'Hashtag Research',url:'hashtag-research-tool.html',desc:'Trending hashtags by platform'},
+{icon:'#️⃣',title:'Hashtag Generator',url:'hashtag-generator-v2.html',desc:'Generate hashtags from topics'},
+{icon:'📘',title:'Facebook Post Generator',url:'facebook-post-generator.html',desc:'Engaging FB posts with emojis'},
+{icon:'🖼️',title:'YouTube Thumbnail Tester',url:'youtube-thumbnail-tester.html',desc:'A/B test thumbnails for CTR'},
+{icon:'🏷️',title:'YouTube Tag Generator',url:'youtube-tag-generator.html',desc:'SEO tags for YouTube'},
+{icon:'🎵',title:'TikTok Video Guide',url:'tiktok-video-length-guide.html',desc:'Optimal video lengths'},
+{icon:'💎',title:'Influencer Rate Calculator',url:'influencer-rate-calculator.html',desc:'Calculate influencer pricing'},
+{icon:'🎭',title:'Bio Generator',url:'bio-generator.html',desc:'Social media bios'},
+{icon:'📋',title:'Disclosure Generator',url:'disclosure-generator.html',desc:'FTC affiliate disclosures'},
+{icon:'🔗',title:'UTM Builder',url:'utm-builder.html',desc:'Track campaign links'},
+{icon:'🏷️',title:'Meta Tag Generator',url:'meta-tag-generator.html',desc:'SEO meta tags'},
+{icon:'🔍',title:'SEO Meta Checker',url:'seo-meta-tag-checker.html',desc:'Audit meta tags'},
+{icon:'🖼️',title:'OG Image Generator',url:'og-image-generator.html',desc:'Social share images'},
+{icon:'📈',title:'Competitor Analysis',url:'competitor-analysis-tool.html',desc:'Analyze competitors'},
+{icon:'🎯',title:'Competitor Tracker',url:'competitor-tracker.html',desc:'Track competitor moves'},
+{icon:'📊',title:'Growth Channel Matrix',url:'growth-channel-matrix.html',desc:'Channel strategy matrix'},
+{icon:'🧲',title:'Lead Magnet Generator',url:'lead-magnet.html',desc:'Create lead magnets'},
+{icon:'🎯',title:'Lead Scoring Tool',url:'lead-scoring-tool.html',desc:'Score and rank leads'},
+{icon:'📈',title:'KPI Dashboard',url:'kpi-dashboard.html',desc:'Track key metrics'},
+{icon:'💡',title:'Content Idea Generator',url:'content-idea-generator.html',desc:'Generate content ideas'},
+{icon:'🤝',title:'Customer Persona Builder',url:'customer-persona-builder.html',desc:'Build buyer personas'},
+{icon:'🗺️',title:'Customer Journey Mapper',url:'customer-journey-mapper.html',desc:'Map customer journeys'},
+{icon:'📝',title:'Blog Post Outline',url:'blog-post-outline-generator.html',desc:'SEO blog outlines'},
+{icon:'📣',title:'Newsletter Widget',url:'newsletter-widget-builder.html',desc:'Build newsletter signup'},
+{icon:'💰',title:'Revenue Projection',url:'revenue-projection-calculator.html',desc:'Project marketing revenue'},
+{icon:'📊',title:'Sales Funnel Calculator',url:'sales-funnel-calculator.html',desc:'Calculate funnel metrics'},
+{icon:'🎨',title:'OG Image Generator',url:'og-image-generator.html',desc:'Open Graph images'},
+{icon:'📱',title:'WhatsApp Status Scheduler',url:'whatsapp-status-scheduler.html',desc:'Schedule WhatsApp status'},
+{icon:'💬',title:'WhatsApp Message Builder',url:'whatsapp-message-builder.html',desc:'Build WA messages'},
+{icon:'📧',title:'Email Template Builder',url:'email-template-builder.html',desc:'Build email templates'},
+{icon:'📧',title:'Email Templates',url:'email-templates.html',desc:'Pre-made email templates'},
+{icon:'✉️',title:'Email Signature',url:'email-signature.html',desc:'Professional signatures'},
+{icon:'💲',title:'Pricing Strategy Tool',url:'pricing-strategy-tool.html',desc:'Optimize pricing'},
+{icon:'🛣️',title:'Project Roadmap',url:'project-roadmap.html',desc:'Marketing roadmaps'},
+{icon:'📊',title:'Revenue Tracker',url:'revenue-tracker.html',desc:'Track revenue streams'},
+{icon:'🏆',title:'Social Counter',url:'social-counter.html',desc:'Social proof counter'},
+{icon:'📝',title:'Meeting Agenda Builder',url:'meeting-agenda-builder.html',desc:'Build marketing agendas'}
+];
+
+const agentData=[
+{name:'Atlas CEO',role:'CEO',caps:['strategic_planning','resource_allocation','revenue_optimization','brand_strategy'],status:'idle',success:95.5},
+{name:'Vega Strategy',role:'Strategy',caps:['market_analysis','competitive_intelligence','growth_planning','campaign_strategy'],status:'idle',success:93.0},
+{name:'Orion Research',role:'Research',caps:['trend_discovery','topic_research','competitor_analysis','fact_checking'],status:'idle',success:97.2},
+{name:'Quill ScriptWriter',role:'ScriptWriter',caps:['script_writing','viral_hooks','storytelling','cta_optimization','seo_copywriting'],status:'idle',success:94.8},
+{name:'Forge PromptEngineer',role:'PromptEngineer',caps:['prompt_engineering','image_prompts','video_prompts','system_prompts'],status:'idle',success:92.3},
+{name:'Cine VideoDirector',role:'VideoDirector',caps:['scene_planning','visual_storytelling','camera_work','pacing','color_grading'],status:'idle',success:91.5},
+{name:'Canvas ThumbnailDesigner',role:'ThumbnailDesigner',caps:['thumbnail_design','ctr_optimization','a_b_testing','brand_visuals'],status:'idle',success:89.7},
+{name:'Pixel ImageGenerator',role:'ImageGenerator',caps:['ai_image_generation','style_consistency','batch_generation'],status:'idle',success:88.4},
+{name:'Motion VideoGenerator',role:'VideoGenerator',caps:['ai_video_generation','text_to_video','image_to_video','avatar_generation'],status:'idle',success:85.2},
+{name:'Echo VoiceGenerator',role:'VoiceGenerator',caps:['text_to_speech','voice_cloning','multi_language_dubbing','emotion_control'],status:'idle',success:90.1}
+];
+
+const sampleTrends=[
+{topic:"Nigeria AI Strategy: NITDA $460M Investment",score:9,viral:8,platform:'YouTube',competition:'low',status:'new'},
+{topic:"How African Creators Are Making Millions on YouTube",score:8,viral:9,platform:'YouTube',competition:'medium',status:'new'},
+{topic:"5 AI Tools Every Nigerian Content Creator Needs",score:9,viral:9,platform:'YouTube',competition:'medium',status:'new'},
+{topic:"Construction Tech 2026: AI in African Building",score:9,viral:6,platform:'YouTube',competition:'very_low',status:'new'},
+{topic:"AI & Automation Transforming Nigerian Businesses",score:9,viral:7,platform:'YouTube',competition:'low',status:'active'},
+{topic:"TikTok Nigeria: 51% Short-Form Video Dominance",score:7,viral:8,platform:'TikTok',competition:'high',status:'active'},
+{topic:"Asake MCBH & Afrobeats Music Trend",score:7,viral:9,platform:'YouTube',competition:'high',status:'active'},
+{topic:"Nigeria 2027 Election Politics & ADC Coalition",score:8,viral:8,platform:'YouTube',competition:'medium',status:'active'},
+{topic:"Top Crypto to Buy July 2026: Nigeria Guide",score:7,viral:8,platform:'YouTube',competition:'high',status:'new'},
+{topic:"AI Image Generation: 1B Videos Projected 2026",score:9,viral:9,platform:'YouTube',competition:'medium',status:'new'}
+];
+
+const sampleProjects=[
+{title:'AI is Changing Construction in Nigeria',type:'tech',platforms:['youtube','tiktok','instagram'],status:'thumbnail',priority:'high',tags:['AI','construction','Nigeria']}
+];
+
+const sampleAds=[
+{biz:'Test Biz',pkg:'Starter',amount:'₦15,000',platforms:['Facebook','Instagram'],status:'in_progress',headline:'Test Ad'},
+{biz:'Harz Co',pkg:'Growth',amount:'₦50,000',platforms:['Facebook','Instagram'],status:'awaiting_payment',headline:'Best AI Platform'},
+{biz:'Test Biz',pkg:'Starter',amount:'₦15,000',platforms:['Facebook'],status:'awaiting_payment',headline:'Test Ad'},
+{biz:'Test Biz',pkg:'Starter',amount:'₦15,000',platforms:['Facebook','Instagram'],status:'awaiting_payment',headline:'50% Off Sale'}
+];
+
+function switchTab(id){document.querySelectorAll('.tab-content').forEach(t=>t.classList.remove('active'));document.querySelectorAll('.nav-tab').forEach(t=>t.classList.remove('active'));document.getElementById(id).classList.add('active');event.target.classList.add('active')}
+
+function renderTrends(container,trends,limit){let html='';trends.slice(0,limit||trends.length).forEach(t=>{
+const compClass=t.competition==='very_low'?'green':t.competition==='low'?'green':t.competition==='medium'?'yellow':'red';
+html+=`<div class="card"><h3>${t.topic}</h3><div class="meta"><span class="tag blue">${t.platform}</span><span class="tag ${compClass}">${t.competition} competition</span><span class="tag">Opportunity: ${t.score}/10</span><span class="tag">Viral: ${t.viral}/10</span><span class="tag green">${t.status}</span></div><div class="score-bar"><div class="fill" style="width:${t.score*10}%"></div></div></div>`});
+container.innerHTML=html||'<div class="empty">No trends found. Run trend discovery to find new opportunities.</div>'}
+
+function renderTools(){let html='';tools.forEach(t=>{html+=`<tool-card href="${t.url}"><div class="icon">${t.icon}</div><h4>${t.title}</h4><p>${t.desc}</p></tool-card>`});
+const grid=document.getElementById('toolsGrid');grid.innerHTML=html;
+grid.querySelectorAll('tool-card').forEach(tc=>{tc.onclick=()=>window.location.href=tc.getAttribute('href')})}
+
+function renderAgents(){let html='';agentData.forEach(a=>{html+=`<div class="agent-card"><div class="name">${a.name}</div><div class="role">${a.role}</div><div class="caps">Capabilities: ${a.caps.join(', ')}</div><div class="status status-${a.status}">${a.status.toUpperCase()} · ${a.success}% success</div></div>`});
+document.getElementById('agentList').innerHTML=html}
+
+function renderProjects(){let html='';sampleProjects.forEach(p=>{html+=`<div class="card"><h3>${p.title}</h3><p>Type: ${p.type} | Priority: ${p.priority}</p><div class="meta">${p.platforms.map(pl=>`<span class="tag blue">${pl}</span>`).join('')}${p.tags.map(t=>`<span class="tag">${t}</span>`).join('')}<span class="tag yellow">${p.status}</span></div></div>`});
+document.getElementById('pipelineList').innerHTML=html||'<div class="empty">No content projects yet. Trends will auto-create projects.</div>'}
+
+function renderAds(){let html='';sampleAds.forEach(a=>{const statusColor=a.status==='in_progress'?'green':'yellow';html+=`<div class="ad-card"><div class="biz">${a.biz}</div><div class="pkg">${a.pkg} — ${a.amount}</div><p>Headline: "${a.headline}"</p><p style="margin-top:.3rem">Platforms: ${a.platforms.join(', ')}</p><span class="status-tag" style="background:rgba(${a.status==='in_progress'?'0,217,126':'255,193,7'},.2);color:${a.status==='in_progress'?'var(--green)':'var(--yellow)'}">${a.status}</span></div>`});
+document.getElementById('adList').innerHTML=html}
+
+function init(){
+document.getElementById('trendCount').textContent=sampleTrends.length;
+document.getElementById('oppCount').textContent=sampleTrends.filter(t=>t.score>=8).length;
+document.getElementById('projectCount').textContent=sampleProjects.length;
+document.getElementById('agentCount').textContent=agentData.length;
+document.getElementById('adCount').textContent=sampleAds.length;
+renderTrends(document.getElementById('topTrends'),sampleTrends,5);
+renderTrends(document.getElementById('trendList'),sampleTrends);
+renderTools();renderAgents();renderProjects();renderAds();
+if(sampleProjects.length===0)document.getElementById('pipelineList').innerHTML='<div class="empty">No content projects yet. Trends will auto-create projects.</div>';
+if(sampleAds.length===0)document.getElementById('adList').innerHTML='<div class="empty">No ad submissions yet.</div>';
+}
+init();
+</script>
+</body>
+</html>
